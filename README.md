@@ -103,6 +103,7 @@ From the bastion host terminal, private EC2 instances were accessed using their 
 2. Secure the key pair by updating its file permissions:
    ```bash
    chmod 0400 <keypair>.pem
+3. Then ssh to instances using their private IP addresses
 
   ```bash
 ssh -i <keypair> ec2-user@<private-ip>
