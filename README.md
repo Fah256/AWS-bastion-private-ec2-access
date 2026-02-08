@@ -99,6 +99,11 @@ This method injects a temporary SSH key into the bastion host.
 ### Step 2: SSH to Private EC2 Instances
 From the bastion host terminal, private EC2 instances were accessed using their private IP addresses:
 
-```bash
+1. Copy the key pair associated with the private EC2 instances to the Bastion Host.
+2. Secure the key pair by updating its file permissions:
+   ```bash
+   chmod 0400 <keypair>.pem
+
+  ```bash
 ssh -i <keypair> ec2-user@<private-ip>
 
